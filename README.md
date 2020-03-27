@@ -1,5 +1,7 @@
 # Be The Hero - Frontend
 
+![Be The Hero](https://raw.githubusercontent.com/GuilhermeBalog/be-the-hero-mobile/master/src/assets/logo%403x.png)
+
 **Be The Hero** é o projeto da Semana OmniStack 11, oferecido pela [Rocketseat](https://rocketseat.com.br/)
 
 O projeto visa conectar pessoas que queiram ajudar e ONGs que precisem de ajuda
