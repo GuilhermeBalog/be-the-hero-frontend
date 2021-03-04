@@ -7,7 +7,7 @@ import api from '../../services/api'
 import './style.css'
 import logoImg from '../../assets/logo.svg'
 
-export default function(){
+export default function () {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [whatsapp, setWhatsapp] = useState('')
@@ -16,7 +16,7 @@ export default function(){
 
     const history = useHistory()
 
-    async function handleRegister(event){
+    async function handleRegister(event) {
         event.preventDefault()
 
         const data = {
@@ -27,11 +27,11 @@ export default function(){
             uf
         }
 
-        try{
+        try {
             const response = await api.post('/ongs', data)
             alert(`Seu ID de Acesso: ${response.data.id}`)
             history.push('/')
-        } catch(error) {
+        } catch (error) {
             alert(`Erro: ${error}`)
         }
     }
@@ -40,42 +40,42 @@ export default function(){
         <div className="register-container">
             <div className="content">
                 <section>
-                    <img src={logoImg} alt="Be The Hero"/>
+                    <img src={logoImg} alt="Be The Hero" />
                     <h1>Cadastro</h1>
                     <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrar casos da sua ONG.</p>
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#e02041" />
-                        Não tenho cadastro
+                        Já tenho cadastro
                     </Link>
                 </section>
 
                 <form onSubmit={handleRegister}>
-                    <input 
-                        placeholder="Nome da ONG" 
+                    <input
+                        placeholder="Nome da ONG"
                         value={name}
                         onChange={e => setName(e.target.value)}
                     />
-                    <input 
-                        type="email" placeholder="email" 
+                    <input
+                        type="email" placeholder="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
-                    <input 
+                    <input
                         placeholder="Whatsapp"
                         value={whatsapp}
                         onChange={e => setWhatsapp(e.target.value)}
                     />
 
                     <div className="input-group">
-                        <input 
+                        <input
                             placeholder="Cidade"
                             value={city}
-                            onChange={e => setCity(e.target.value)} 
+                            onChange={e => setCity(e.target.value)}
                         />
-                        <input 
-                            placeholder="UF" 
-                            style={ { width: 80 } } 
+                        <input
+                            placeholder="UF"
+                            style={{ width: 80 }}
                             value={uf}
                             onChange={e => setUf(e.target.value)}
                         />
