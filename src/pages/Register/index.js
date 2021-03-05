@@ -7,7 +7,7 @@ import api from '../../services/api'
 import './style.css'
 import logoImg from '../../assets/logo.svg'
 
-export default function () {
+export default function Register() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [whatsapp, setWhatsapp] = useState('')
